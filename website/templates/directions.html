@@ -1,0 +1,120 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Campus Shuttle Map</title>
+    <style>
+      #map {
+        height: 500px;
+      }
+    </style>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyMo_Wo3oMvIGs-mE3UW7wRylXBs-o2Ys&callback=initMap"
+      async defer
+    ></script>
+    <script>
+      var map;
+      var directionsService;
+      var directionsRenderer;
+      var startSelect;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 16,
+        });
+
+        // create the drop-down menus
+        var startSelect = document.getElementById("start");
+        var toSelect = document.getElementById("end");
+
+        // add shuttle stops data to the "to" drop-down menu
+        var shuttleStops = [
+          { name: "Mather Circle", lat: 41.74622, lng: -72.69262 },
+          { name: "Seabury (Hamlin Archway)", lat: 41.74764, lng: -72.69309 },
+          { name: "Seabury (Hamlin Archway)", lat: 41.74764, lng: -72.69309 },
+          { name: "Seabury (Hamlin Archway)", lat: 41.74764, lng: -72.69309 },
+          { name: "Seabury (Hamlin Archway)", lat: 41.74764, lng: -72.69309 },
+          { name: "Seabury (Hamlin Archway)", lat: 41.74764, lng: -72.69309 },
+          { name: "Seabury (Hamlin Archway)", lat: 41.74764, lng: -72.69309 },
+          { name: "Seabury (Hamlin Archway)", lat: 41.74764, lng: -72.69309 },
+          { name: "Seabury (Hamlin Archway)", lat: 41.74764, lng: -72.69309 },
+          // add more shuttle stops here
+        ];
+        for (var i = 0; i < shuttleStops.length; i++) {
+          var option = document.createElement("option");
+          option.text = shuttleStops[i].name;
+          option.value = shuttleStops[i].lat + "," + shuttleStops[i].lng;
+          toSelect.add(option);
+        }
+
+        // initialize the directions service and renderer
+        directionsService = new google.maps.DirectionsService();
+        directionsRenderer = new google.maps.DirectionsRenderer();
+        directionsRenderer.setMap(map);
+
+        // add current location to start drop-down menu
+        var option = document.createElement("option");
+        option.text = "Current Location";
+        startSelect.add(option);
+
+        // get user's location and center the map on it
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var currentLocation = new google.maps.LatLng(
+              position.coords.latitude,
+              position.coords.longitude
+            );
+            map.setCenter(currentLocation);
+
+            // set the value of the "Current Location" option to the user's current location
+            option.value =
+              position.coords.latitude + "," + position.coords.longitude;
+          });
+        } else {
+          // if Geolocation is not supported, default to a location
+          map.setCenter(new google.maps.LatLng(41.74802, -72.69025));
+        }
+      }
+
+      // function to calculate and display the directions
+      function calculateRoute() {
+        var start = document.getElementById("start").value.split(",");
+        var end = document.getElementById("end").value.split(",");
+        var request = {
+          origin:
+            start[0] === "Current Location"
+              ? new google.maps.LatLng(
+                  map.getCenter().lat(),
+                  map.getCenter().lng()
+                )
+              : new google.maps.LatLng(start[0], start[1]),
+          destination: new google.maps.LatLng(end[0], end[1]),
+          travelMode: google.maps.TravelMode.WALKING,
+        };
+        directionsService.route(request, function (result, status) {
+          if (status == "OK") {
+            directionsRenderer.setDirections(result);
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div>
+      <label for="start">Start:</label>
+      <select id="start">
+        <!-- "Current Location" option will be added dynamically by the script -->
+      </select>
+    </div>
+    <div>
+        <label for="end">End:</label>
+        <select id="end">
+          <option value="">Select destination</option>
+        </select>
+        <button onclick="calculateRoute()">Get Directions</button>
+          </body>
+        </html>
+        {% endblock %}
+        

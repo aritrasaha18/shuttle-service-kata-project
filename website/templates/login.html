@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+%}
+<form method="POST">
+  <head><h3 align="center">Trinity College Shuttle Service</h3></head>
+  <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    </style>
+    <body>
+    <img src="https://i.ibb.co/CB2HtFs/Screenshot-2023-04-07-at-2-32-08-PM.png" alt="Trinity College" style="width:20%;">
+  </body>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Enter email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      name="password"
+      placeholder="Enter password"
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+{% endblock %}
