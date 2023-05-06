@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb-deployment
+  labels:
+    app: mongodb-data
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb-data
+  template:
+    metadata:
+      labels:
+        app: mongodb-data
+    spec:
+      containers:
+        - name: mongodb-data
+          image: mongo
+          ports:
+            - containerPort: 27017
+              name: mongodb-data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+  labels:
+    app: mongodb-data
+spec:
+  selector:
+    app: mongodb-data
+  ports:
+    - name: mongodb-data
+      port: 27017
+      targetPort: mongodb-data

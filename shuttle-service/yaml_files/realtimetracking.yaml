@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realtimetracking-app
+  labels:
+    app: realtimetracking
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realtimetracking
+  template:
+    metadata:
+      labels:
+        app: realtimetracking
+    spec:
+      containers:
+      - name: realtimetracking
+        image: aritrasaha18/realtimetracking:1.0.0
+        env:
+        - name: DATABASE_DB
+          valueFrom:
+            configMapKeyRef:
+              name: application-configmap
+              key: database_url
+        - name: REAL_TIME
+          valueFrom:
+            configMapKeyRef:
+              name: application-configmap
+              key: realtime_url
+        resources:
+          limits:
+            memory: "512Mi"
+          requests:
+            memory: "256Mi"
+        ports:
+        - containerPort: 8087
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: realtimetracking-service
+  labels:
+    app: realtimetracking
+spec:
+  selector:
+    app: realtimetracking
+  ports:
+  - name: http
+    port: 8087
+    targetPort: 8087
+  type: LoadBalancer

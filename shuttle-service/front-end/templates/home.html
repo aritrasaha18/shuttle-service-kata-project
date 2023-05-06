@@ -1,0 +1,137 @@
+<html>
+<head>
+	<title>Example Page</title>
+	<style>
+		body {
+			background-image: url("https://www.trincoll.edu/wp-content/uploads/2022/12/Website-Default-Image.png");
+			background-size: cover;
+			background-position: fixed;
+		}
+	</style>
+</head>
+<body>
+	<br />
+	<h1 align="center">Welcome to the Trinity College Shuttle Service</h1>
+	<img src="https://i.ibb.co/GdRK97k/imageedit-2-2815204148.png" alt="Trinity College" style="width: 12%; display: block; margin: auto;">
+	<br />
+	<br />
+	
+  
+  <br />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		nav {
+			background-color: #555;
+			color: #fff;
+			padding: 10px;
+		}
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+		}
+		nav li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+		nav a:hover {
+			background-color: #666;
+		}
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.box {
+			background-color: #fff;
+			padding: 20px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px #333;
+			flex-basis: calc(33.33% - 20px);
+		}
+		.box h3 {
+			margin-top: 0;
+		}
+		.box p {
+			margin-bottom: 0;
+		}
+		.btn-purple {
+			background-color: #8A2BE2;
+			border-color: #8A2BE2;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+			}
+
+			.btn-purple:hover {
+			background-color: #9400D3;
+			border-color: #9400D3;
+			}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<h3>Routes</h3>
+			<p>View the different routes our buses take, including maps and stops along the way.</p>
+      <br />
+      <form method="POST" action="/routes">
+		<button type="submit" class="btn btn-primary btn-lg btn-block btn-purple">Learn more</button>
+	  </form>	  
+		</div>
+		<div class="box">
+			<h3>Schedule</h3>
+			<p>Check the schedule for our buses, including times and frequency of service.</p>
+			<br />
+			<form method="POST" action="/schedule">
+				<button type="submit" class="btn btn-primary btn-lg btn-block btn-purple">Learn more</button>
+			  </form>
+		</div>
+		<div class="box">
+			<h3>Request</h3>
+			<p>Experience the real-tracking service and request a shuttle to come to the nearest pickup point.</p>
+			<br />
+			<form method="POST" action="/requestShuttle">
+				<button type="submit" class="btn btn-primary btn-lg btn-block btn-purple">Learn more</button>
+			  </form>
+		</div>
+		<div class="box">
+			<h3>Contact Us</h3>
+			<p>Get in touch with us if you have any questions, comments, or concerns about our bus service.</p>
+			<br />
+			<form method="POST" action="/getContacts">
+				<button type="submit" class="btn btn-primary btn-lg btn-block btn-purple">Learn more</button>
+			  </form>
+		</div>
+</html>

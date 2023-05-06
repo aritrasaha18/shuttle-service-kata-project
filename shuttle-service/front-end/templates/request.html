@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trinity Shuttle Service</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        text-align: center;
+        color: #444444;
+        margin-top: 50px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      label {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        color: #444444;
+      }
+      select {
+        margin-top: 10px;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      input[type=submit] {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #008080;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      input[type=submit]:hover {
+        background-color: #006666;
+      }
+      p {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 20px;
+        color: #444444;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Request Shuttle Service</h1>
+    {% if current_time %}
+    <p>Current time: {{ current_time }}</p>
+    {% endif %} 
+    <form method="POST" action="/get_location">
+      <label for="location">Where are you going?</label>
+      <select name="location" id="location">
+        <option value="Mather">Mather</option>
+        <option value="Seabury">Seabury</option>
+        <option value="155 Allen Place">155 Allen Place</option>
+        <option value="Hillel House">Hillel House</option>
+        <option value="Broad Street">Broad Street</option>
+        <option value="Crescent Street Lot">Crescent Street Lot</option>
+        <option value="69 Crescent Street">69 Crescent Street</option>
+        <option value="Hallden">Hallden</option>
+        <option value="Raether LITC">Raether LITC</option>
+        <option value="Ferris Broad Street Parking Lot">Ferris Broad Street Parking Lot</option>
+        <option value="Funston">Funston</option>
+      </select>
+      <input type="submit" value="Request Shuttle">
+    </form>
+    {% if realtime %}
+      <p>{{ realtime }}</p>
+    {% endif %}
+    {% if message %}
+      <p>{{ message }}</p>
+    {% endif %}    
+  </body>
+</html>

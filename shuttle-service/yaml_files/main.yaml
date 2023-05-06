@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: main-app
+  labels:
+    app: main
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: main
+  template:
+    metadata:
+      labels:
+        app: main
+    spec:
+      containers:
+      - name: main
+        image: aritrasaha18/main:1.0.0
+        env:
+          - name: CONTACTS
+            valueFrom:
+              configMapKeyRef:
+                name: application-configmap
+                key: contacts_url
+          - name: REQUEST_SHUTTLE
+            valueFrom:
+              configMapKeyRef:
+                name: application-configmap
+                key: requestshuttle_url
+          - name: REAL_TIME_TRACKING
+            valueFrom:
+              configMapKeyRef:
+                name: application-configmap
+                key: realtimetracking_url
+          - name: REAL_TIME
+            valueFrom:
+              configMapKeyRef:
+                name: application-configmap
+                key: realtime_url 
+        ports:
+        - containerPort: 8089
+        resources:
+          limits:
+            memory: "256Mi"
+          requests:
+            memory: "128Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: main-service
+  labels:
+    app: main
+spec:
+  selector:
+    app: main
+  ports:
+  - name: http
+    port: 8089
+    targetPort: 8089
+  type: LoadBalancer
