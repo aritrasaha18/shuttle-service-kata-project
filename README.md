@@ -20,6 +20,6 @@ The Shuttle Tracker is a micro-service application that connects students with .
 1. Deploy this.
 
 ``` 
-Inside yaml-files,
+Inside yaml-files, run
 bash run.sh 
 ```
