@@ -36,6 +36,14 @@ Number of modules : 6
 
 ## Back-end :
 
+1. MongoDB - Database
+2. Python
+
+## Devops Technologies:
+
+1. Kubernetes
+2. Docker
+
 ## Component Diagram
 ![Diagram](https://github.com/aritrasaha18/shuttle-service-kata-project/blob/main/cloudproject.png)
 
