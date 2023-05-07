@@ -48,7 +48,8 @@ Number of modules : 6
 
 1. Google Maps API - retrieves the Google Maps with access to current location and destinations
 
-## Component Diagram
+## Trinity College Shuttle Service Architecture Diagram
+
 ![Diagram](https://github.com/aritrasaha18/shuttle-service-kata-project/blob/main/cloudproject.png)
 
 ## How to deploy the application on Kubernetes
