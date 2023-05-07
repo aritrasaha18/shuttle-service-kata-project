@@ -15,7 +15,7 @@ The Shuttle Tracker is a micro-service application that connects students with .
 ## Languages
 
 ## Component Diagram
-
+![Diagram](https://github.com/aritrasaha18/shuttle-service-kata-project/blob/main/cloudproject.png)
 ## Build, Deploy, and Run the Project App 
 1. Deploy this.
 
