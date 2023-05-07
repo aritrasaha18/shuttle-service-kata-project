@@ -71,7 +71,7 @@ To run the app in Kubernetes, install Docker for Desktop Mac or Windows or choos
 
 4. Check and watch if all the components are up and running
 ```
-  kubectl get all
+   kubectl get all
 ```
 
 ## Testing the App on GKE
