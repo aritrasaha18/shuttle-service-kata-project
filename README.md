@@ -44,14 +44,33 @@ Number of modules : 6
 1. Kubernetes
 2. Docker
 
+## External Services
+
+1. Google Maps API - retrieves the Google Maps with access to current location and destinations
+
 ## Component Diagram
 ![Diagram](https://github.com/aritrasaha18/shuttle-service-kata-project/blob/main/cloudproject.png)
 
-## Run Locally
-1. Inside yaml-files, run
-``` 
-bash run.sh 
+## How to deploy the application on Kubernetes
+
+To run the app in Kubernetes, install Docker for Desktop Mac or Windows or choose GCP Kubernetes cluster. The folder inside shuttle-service named yaml_files contains all the YAML files for the app. Below are the steps for running the app in platforms:
+
+1. First clone the project to GCP kubernetes cluster or local machine
 ```
+    git clone https://github.com/aritrasaha18/shuttle-service-kata-project.git
+```
+2. Change directory to yaml_files
+```
+    cd shuttle-service/yaml_files
+```
+3. Compile and run the shell script, run.sh
+```
+    bash run.sh
+```
+
+4. Check and watch if all the components are up and running
+```
+  kubectl get all
 
 2. Open your browser and enter:
 ``` 
