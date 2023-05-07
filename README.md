@@ -1,12 +1,12 @@
-<h1 align="center">Shuttle Tracker Project </h1>
+<h1 align="center">Trinity College Shuttle Service </h1>
 
 ## Project Information 👤
-* Authors:
-* Date: 
+* Authors: B D S Aritra & Andrew Briden
+* Date: 06/06/2023
 * Course: [CPSC 415]
 
 ## Project Description
-The Shuttle Tracker is a micro-service application that connects students with ...
+The Shuttle Tracker is a micro-service application that connect
 
 ## Primary UI Functions
 
