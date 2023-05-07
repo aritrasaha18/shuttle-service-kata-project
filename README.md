@@ -38,10 +38,16 @@ Number of modules : 6
 
 ## Component Diagram
 ![Diagram](https://github.com/aritrasaha18/shuttle-service-kata-project/blob/main/cloudproject.png)
-## Build, Deploy, and Run the Project App 
-1. Deploy this.
 
+## Run Locally
+1. Inside yaml-files, run
 ``` 
-Inside yaml-files, run
 bash run.sh 
 ```
+
+2. Open your browser and enter:
+``` 
+http://localhost:8089/
+```
+
+## Run GKE
