@@ -24,8 +24,17 @@ Request Shuttle : The Shuttle Service also provides a detailed schedule of the s
 Contacts: By storing the contact information of shuttle drivers, the Shuttle Service empowers users to connect with drivers directly, streamlining the communication process and making it easier to address any special needs or concerns that may arise during transportation. 
 
 ## Modules 
+Number of modules : 6
 
-## Languages
+## Languages and Framework : 
+
+## Front-end : 
+
+1. Python
+2. Flask
+3. HTML and CSS
+
+## Back-end :
 
 ## Component Diagram
 ![Diagram](https://github.com/aritrasaha18/shuttle-service-kata-project/blob/main/cloudproject.png)
