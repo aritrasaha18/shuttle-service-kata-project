@@ -71,10 +71,9 @@ To run the app in Kubernetes, install Docker for Desktop Mac or Windows or choos
 4. Check and watch if all the components are up and running
 ```
   kubectl get all
-
-2. Open your browser and enter:
-``` 
-http://localhost:8089/
 ```
 
-## Run GKE
+## Testing the App on GKE
+
+1. Follow the same procedures after cloning the files to your Google Kubernetes cluster
+2. Deploy the Application in the same way as you would in Kubernetes running on your local machine
