@@ -63,6 +63,9 @@ Number of modules : 6
 
 ![Diagram](https://github.com/aritrasaha18/shuttle-service-kata-project/blob/main/cloudproject.png)
 
+## Sequence Diagram
+![Sequence Diagram](https://github.com/aritrasaha18/shuttle-service-kata-project/blob/main/cloudproject-Sequence.png)
+
 ## How to deploy the application on Kubernetes
 
 To run the app in Kubernetes, install Docker for Desktop Mac or Windows or choose GCP Kubernetes cluster. The folder inside shuttle-service named yaml_files contains all the YAML files for the app. Below are the steps for running the app in platforms:
