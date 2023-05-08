@@ -50,7 +50,7 @@ Number of modules : 6
 
 ## Trinity College Shuttle Service Architecture Diagram
 
-![Diagram](https://github.com/aritrasaha18/shuttle-service-kata-project/blob/main/structure.pdf)
+![Diagram](https://github.com/aritrasaha18/shuttle-service-kata-project/blob/main/cloudproject.png)
 
 ## How to deploy the application on Kubernetes
 
