@@ -82,10 +82,13 @@ To run the app in Kubernetes, install Docker for Desktop Mac or Windows or choos
 ```
     bash run.sh
 ```
-
 4. Check and watch if all the components are up and running
 ```
    kubectl get all
+```
+5. Try the following link in a browser
+```
+    http://localhost:8089
 ```
 
 ## Testing the App on GKE
