@@ -15,7 +15,7 @@ In essence, the Trinity College Shuttle Service represents a shining example of 
 
 ## Primary UI Functions
 
-Routes : The Trinity College Shuttle Service is a sophisticated micro-service application that offers an impressive range of features to meet the transportation needs of the Trinity College community. Its advanced functionalities include a robust route search feature that automatically identifies the nearest stops to the user's location and generates optimal shuttle routes to reach their desired destination.
+Routes : The route search feature automatically identifies the nearest stops to the user's location and generates a route reach the closest stop.
 
 Schedule : The Shuttle Service also provides a detailed schedule of the shuttle service running times, allowing users to plan their commutes efficiently and optimize their time on campus. 
 
