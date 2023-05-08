@@ -28,13 +28,13 @@ Number of modules : 6
 
 ## Languages and Frameworks : 
 
-## Front-end : 
+### Front-end : 
 
 1. Python
 2. Flask
 3. HTML and CSS
 
-## Back-end :
+### Back-end :
 
 1. MongoDB - Database
 2. Python
