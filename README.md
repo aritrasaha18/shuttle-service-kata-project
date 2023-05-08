@@ -88,7 +88,7 @@ To run the app in Kubernetes, install Docker for Desktop Mac or Windows or choos
 ```
 5. Try the following link in a browser
 ```
-    http://localhost:8089
+   http://localhost:8089
 ```
 
 ## Testing the App on GKE
@@ -96,3 +96,6 @@ To run the app in Kubernetes, install Docker for Desktop Mac or Windows or choos
 1. Follow the same procedures after cloning the files to your Google Kubernetes cluster
 2. Deploy the Application in the same way as you would in Kubernetes running on your local machine
 3. Access the main page by putting in the address as External-IP:8089 in Kubernetes from the command kubect get all as stated before
+```
+   http://External-IP:8089
+```
