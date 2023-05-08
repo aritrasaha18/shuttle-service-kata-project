@@ -1,0 +1,78 @@
+"main.py" -> RealTime: "" {style.multiple: false}
+"main.py" -> Contacts: {style.multiple: false}
+"main.py" -> RequestShuttle: POST {
+  style.font-size: 20
+  style.font-color: "#0a0f25"
+  style.multiple: false
+}
+RealTime -> RealTimeTracking: GET {
+  style.font-size: 20
+  style.font-color: "#0a0f25"
+  style.multiple: false
+}
+RequestShuttle -> RealTime: GET {
+  style.font-size: 20
+  style.font-color: "#0a0f25"
+  style.multiple: false
+}
+
+RealTimeTracking.width: 156
+RealTimeTracking.height: 62
+Database -> RealTimeTracking: GET {
+  style.font-size: 20
+  style.font-color: "#0a0f25"
+  style.multiple: false
+}
+Database -> RequestShuttle: GET {
+  style.font-size: 20
+  style.font-color: "#0a0f25"
+  style.multiple: false
+}
+MongoDB -> Database: {
+  style.multiple: false
+  style.animated: true
+}
+
+RealTimeTracking.style.multiple: false
+
+RealTimeTracking.style.double-border: false
+
+RealTimeTracking: {
+  style.3d: false
+}
+RequestShuttle.width: 141
+RequestShuttle.height: 58
+RequestShuttle.style.multiple: false
+RequestShuttle.style.double-border: false
+RequestShuttle: {
+  style.3d: false
+}
+RequestShuttle
+Contacts.style.multiple: false
+Contacts.style.double-border: false
+Contacts: {
+  style.3d: false
+}
+Contacts
+MongoDB.style.multiple: false
+MongoDB.style.double-border: false
+MongoDB: {
+  style.3d: false
+  style.fill: "#c2fea8"
+}
+MongoDB
+RealTime.style.multiple: false
+RealTime.style.double-border: false
+RealTime: {
+  style.3d: false
+}
+RealTime
+"main.py".style.multiple: false
+"main.py".style.double-border: false
+"main.py".style.3d: false
+Database.style.multiple: false
+Database.style.double-border: false
+Database: {
+  style.3d: false
+}
+Database
