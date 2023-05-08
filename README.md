@@ -26,7 +26,7 @@ Contacts: By storing the contact information of shuttle drivers, the Shuttle Ser
 ## Modules 
 Number of modules : 6
 
-## Languages and Framework : 
+## Languages and Frameworks : 
 
 ## Front-end : 
 
@@ -47,6 +47,17 @@ Number of modules : 6
 ## External Services
 
 1. Google Maps API - retrieves the Google Maps with access to current location and destinations
+
+## Microservices
+
+
+| Microservice Name  | Purpose                                                |
+|-----------------|--------------------------------------------------------|
+| Contacts        | Creates and displays contact information of the shuttle drivers
+| RealTime       | Generates a time between 9:00 pm and 1:00 am
+| RequestShuttle | Generates the arrival time and location of the shuttle
+| RealTimeTracking| Generates the real-time tracking of the shuttle service
+| Database | Holds stops and times to access 
 
 ## Trinity College Shuttle Service Architecture Diagram
 
